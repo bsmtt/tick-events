@@ -1,0 +1,23 @@
+{
+	"Name is required": "الاسم مطلوب",
+	"welcome": "اهلا",
+	"password_is_required": "رمز المرور مطلوب",
+	"username_already_exists": "اسم المستخدم موجود",
+	"name_is_required": "الاسم مطلوب",
+	"mobile_already_exists": "mobile_already_exists",
+	"event_created": "تم اضافة الحدث",
+	"description_is_required": "description_is_required",
+	"start_date_is_required": "start_date_is_required",
+	"end_date_is_required": "end_date_is_required",
+	"room_id_is_required": "room_id_is_required",
+	"capacity_is_required": "capacity_is_required",
+	"price_is_required": "price_is_required",
+	"host_id_is_required": "host_id_is_required",
+	"speaker_id_is_required": "speaker_id_is_required",
+	"speakert_id_is_required": "speakert_id_is_required",
+	"capacity_should_be_number": "capacity_should_be_number",
+	"email_is_required": "email_is_required",
+	"host_created": "host_created",
+	"host_updated": "host_updated",
+	"host_deleted": "host_deleted"
+}
