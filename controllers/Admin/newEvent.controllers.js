@@ -69,7 +69,7 @@ class NewEventController {
   update = async (req, res) => {
     try {
       let id = req.params.id;
-      const data = await getHostSchema(req).validateAsync(req.body);
+      const data = await getNewEventSchema(req).validateAsync(req.body);
       const newEvent = await NewEvent.updateOne({ _id: id }, data);
 
       res.status(200).json({
