@@ -22,6 +22,25 @@ class NewEventController {
     }
   };
 
+  show = async (req, res) => {
+    try {
+      let id = req.params.id;
+      const newEvent = await NewEvent.findById(id);
+      res.status(200).json({
+        status: true,
+        message: null,
+        data: newEvent,
+      });
+    } catch (err) {
+      let message = err.message;
+      if (err.name == "CastError") message = "Not Found";
+      res.status(422).json({
+        status: false,
+        data: message,
+        message: err,
+      });
+    }
+  };
 
   store = async (req, res) => {
     try {
