@@ -23,7 +23,7 @@ class NewEventController {
       res.status(422).json({
         status: false,
         data: message,
-        message: "error in log in",
+        message: "error in creating",
       });
     }
   };
@@ -37,7 +37,7 @@ class NewEventController {
       res.status(200).json({
         status: true,
         message: i18n.__("event_updated"),
-        data: host,
+        data: newEvent,
       });
     } catch (err) {
       let message =
