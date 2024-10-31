@@ -1,0 +1,692 @@
+{
+	"info": {
+		"_postman_id": "46aa71c0-871c-425d-a628-a254cc28dfbb",
+		"name": "Tick-Event",
+		"description": "**An Event Book App**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12984962"
+	},
+	"item": [
+		{
+			"name": "hosts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/admins/hosts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admins",
+						"hosts"
+					]
+				},
+				"description": "**get all hosts data list**"
+			},
+			"response": []
+		},
+		{
+			"name": "add host",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "cairo university",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "The cairo univirsity team",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "cairo@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "01234567899",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admins/hosts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admins",
+						"hosts"
+					]
+				},
+				"description": "# Add Host\n\nThis endpoint allows administrators to add a new host.\n\n## Request Body\n\n- `name` (text): The name of the host.\n    \n- `description` (text): Description of the host.\n    \n- `email` (text): Email of the host.\n    \n- `mobile` (text): Mobile number of the host.\n    \n\n## Response\n\nThe response will contain the status of the request to add a new host."
+			},
+			"response": []
+		},
+		{
+			"name": "add event",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "The Biggest Digital Conference.",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "2024-12-05",
+							"type": "text"
+						},
+						{
+							"key": "capacity",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "There arge many variations ohf passages of sorem gpsum ilable, but the majority have suffered alteration in some form, by ected humour.",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2024-12-07",
+							"type": "text"
+						},
+						{
+							"key": "room_id",
+							"value": "671d58589204bfe44b71a495",
+							"type": "text"
+						},
+						{
+							"key": "host_id",
+							"value": "671d498a316fb42412369760",
+							"type": "text"
+						},
+						{
+							"key": "speaker_id",
+							"value": "671d5a0f61888a85313b9ac9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/admins/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"admins",
+						"events"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "# Admins Events\n\nThis endpoint allows administrators to create new events.\n\n## Request Body\n\n- `name` (text): The name of the event.\n    \n- `start_date` (text): The start date of the event.\n    \n- `capacity` (text): The capacity or maximum number of attendees for the event.\n    \n- `price` (text): The price of the event.\n    \n- `description` (text): A description of the event.\n    \n- `end_date` (text): The end date of the event.\n    \n- `room_id` (text): The ID of the room where the event will take place.\n    \n- `host_id` (text): The ID of the host for the event.\n    \n- `speaker_id` (text): The ID of the speaker for the event.\n    \n\n## Response (JSON Schema)\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"eventId\": {\n      \"type\": \"string\"\n    },\n    \"message\": {\n      \"type\": \"string\"\n    }\n  }\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "events",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "cairo university",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "The cairo univirsity team",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/events/672150e7cb717d17d347e431",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"events",
+						"672150e7cb717d17d347e431"
+					]
+				},
+				"description": "### GET /users/events/{eventId}\n\nThis endpoint retrieves details of a specific event.\n\n#### Request\n\n- Method: GET\n    \n- URL: `http://localhost:4000/users/events/672150e7cb717d17d347e431`\n    \n\n#### Response\n\nThe response is a JSON object with the following schema:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"status\": {\n      \"type\": \"boolean\"\n    },\n    \"message\": {\n      \"type\": \"null\"\n    },\n    \"data\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"_id\": {\n          \"type\": \"string\"\n        },\n        \"name\": {\n          \"type\": \"string\"\n        },\n        \"description\": {\n          \"type\": \"string\"\n        },\n        \"start_date\": {\n          \"type\": \"string\"\n        },\n        \"end_date\": {\n          \"type\": \"string\"\n        },\n        \"price\": {\n          \"type\": \"number\"\n        },\n        \"status\": {\n          \"type\": \"string\"\n        },\n        \"capacity\": {\n          \"type\": \"number\"\n        },\n        \"room_id\": {\n          \"type\": \"string\"\n        },\n        \"speaker_id\": {\n          \"type\": \"string\"\n        },\n        \"host_id\": {\n          \"type\": \"string\"\n        },\n        \"createdAt\": {\n          \"type\": \"string\"\n        },\n        \"updatedAt\": {\n          \"type\": \"string\"\n        },\n        \"id\": {\n          \"type\": \"number\"\n        },\n        \"__v\": {\n          \"type\": \"number\"\n        }\n      }\n    }\n  }\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "book event",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "cairo university",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "The cairo univirsity team",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/events/book/672150e7cb717d17d347e431",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"events",
+						"book",
+						"672150e7cb717d17d347e431"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "cairo university",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "The cairo univirsity team",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/events/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"events",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "A-2",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "capacity",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admins/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admins",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add speaker",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "dr amin",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "prof in something",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admins/speakers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admins",
+						"speakers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "speackers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "dr amin",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "prof in something",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admins/speakers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admins",
+						"speakers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rooms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzFkNDcyMDBmN2IyM2QyMzE3NGNhMDkiLCJpYXQiOjE3Mjk5NzIwOTV9.quUR24rSx-Hm5a-83rJY_uYKB3Puj2O-q2QW3ImUJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "cairo university",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "The cairo univirsity team",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admins/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admins",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "super admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pasword",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "01234567899",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admins/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admins",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "pasword",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "01234567899",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admins/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admins",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
