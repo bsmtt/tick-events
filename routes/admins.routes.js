@@ -11,6 +11,9 @@ router.post('/signup', authController.signUp);
 router.post('/signin', authController.signIn);
 
 router.post('/events', adminAuth, newEventController.store);
+router.get('/events/:id', adminAuth, hostController.show);
+router.put('/events/:id', adminAuth, hostController.update);
+router.delete('/events/:id', adminAuth, hostController.delete);
 
 router.post('/hosts', adminAuth, hostController.store);
 router.get('/hosts', adminAuth, hostController.index);  
