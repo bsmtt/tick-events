@@ -2,6 +2,7 @@ const { getNewEventSchema } = require("../../validations/NewEventValidation");
 const Joi = require("@hapi/joi");
 const NewEvent = require("../../models/newEvent.model");
 const i18n = require("../../config/i18n");
+const fs = require('fs')
 
 class NewEventController {
   index = async (req, res) => {
