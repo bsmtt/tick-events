@@ -21,5 +21,6 @@
 	"speakert_id_is_required": "speakert_id_is_required",
 	"event_created": "event_created",
 	"Booked": "Booked",
-	"bookings": "bookings"
+	"bookings": "bookings",
+	"event_updated": "event_updated"
 }
