@@ -35,5 +35,6 @@ An event planning application that helps you organize and manage events efficien
 ## API Documentation
 - `POST /api/events`: Create a new event
 - `GET /api/events`: Get all events
+- Documentation link: [postman documentation](https://documenter.getpostman.com/view/12984962/2sAY4vi3mX)
 
 
