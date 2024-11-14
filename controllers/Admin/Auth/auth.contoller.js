@@ -45,7 +45,7 @@ class AuthController {
         err instanceof Joi.ValidationError
           ? err.details[0].message
           : err.message;
-      res.status(500).json({
+      res.status(422).json({
         status: false,
         data: message,
         message: "error in log in",
