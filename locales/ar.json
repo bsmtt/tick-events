@@ -19,5 +19,6 @@
 	"email_is_required": "email_is_required",
 	"host_created": "host_created",
 	"host_updated": "host_updated",
-	"host_deleted": "host_deleted"
+	"host_deleted": "host_deleted",
+	"Booked": "تم الحجز"
 }
