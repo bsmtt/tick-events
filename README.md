@@ -27,6 +27,7 @@ An event planning application that helps you organize and manage events efficien
 2. Install dependencies: `npm install`
 3. Set up environment variables in `.env`
     JWTKEY=randomstring
+4. add data base named **tick-events** in mongo db
 4. Run the app: `npm run serve`
 
 ## Usage
