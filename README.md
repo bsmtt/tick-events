@@ -31,6 +31,7 @@ An event planning application that helps you organize and manage events efficien
 
 ## Usage
 - **Create events** and manage guest lists.
+- **Edit event**
 - **Book events by user**
 
 ## API Documentation
